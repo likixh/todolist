@@ -22,7 +22,7 @@ document
 window.addEventListener("DOMContentLoaded", fetchTasks);
 
 function fetchTasks() {
-  fetch("https://todolistnode-server.onrender.com")
+  fetch("https://todolistnode-server.onrender.com/tasks")
     .then((response) => response.json())
     .then((tasks) => {
       const taskList = document.getElementById("taskList");
@@ -35,7 +35,7 @@ function fetchTasks() {
 }
 
 function addTaskToBackend(task) {
-  fetch("https://todolistnode-server.onrender.com", {
+  fetch("https://todolistnode-server.onrender.com/tasks", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
