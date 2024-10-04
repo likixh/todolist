@@ -29,11 +29,7 @@ function fetchTasks() {
       taskList.innerHTML = "";
 
       for (let i = 0; i < tasks.length; i++) {
-        addTaskToList{}
-
-        newTask.appendChild(deleteButton);
-
-        taskList.appendChild(newTask);
+        addTaskToList(tasks[i])
       }
     });
 }
